@@ -1,5 +1,5 @@
 <template>
-  <div id="app px-20 text-light">
+  <div id="app " class=" text-light">
     <NavBar />
     <router-view />
     <FooterBar />
@@ -25,7 +25,7 @@ export default {
 
 #app {
   font-family: 'Nunito', sans-serif;
-  background: url('http://buster.mbkip3ms9u-e92498n216kr.p.temp-site.link/wp-content/uploads/2017/12/slider-bg2.jpg?id=160');
+  background: url('http://buster.mbkip3ms9u-e92498n216kr.p.temp-site.link/wp-content/uploads/2017/12/slider-bg2.jpg?id=160') #020d18;
   background-attachment: fixed;
 }
 ::-webkit-scrollbar {
