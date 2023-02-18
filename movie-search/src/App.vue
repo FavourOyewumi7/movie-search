@@ -1,20 +1,19 @@
 <template>
   <div id="app px-20 text-light">
     <NavBar />
-    <MovieListPage />
+    <router-view />
     <FooterBar />
   </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue';
-import MovieListPage from './components/MovieListPage.vue';
+
 import FooterBar from './components/FooterBar.vue';
 export default {
   name: 'App',
   components: {
     NavBar,
-    MovieListPage,
     FooterBar
   }
 }
@@ -51,3 +50,4 @@ export default {
 }
 
 </style>
+ 
