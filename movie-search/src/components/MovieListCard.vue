@@ -1,10 +1,14 @@
 <template>
-  <div class="text-white">
+  <div class="text-light">
 
-    <div v-bind:style="{ backgroundImage: 'url(' + 'https://image.tmdb.org/t/p/w500/'+ movieInfo.backdrop_path + ')' }">
-
-        <p></p>
-        <h2 class="text-white">{{movieInfo.title}}</h2>
+    <div v-bind:style="{ backgroundImage: 'url(' + 'https://image.tmdb.org/t/p/w500/'+ movieInfo.poster_path + ')' }" class="p-4 h-[45rem]  relative rounded-md ">
+        <div class="ml-4 absolute inset-x-0 bottom-8 mb-4">
+            <div class="flex flex-row gap-2 flex-wrap">
+                <p v-for="(genre,index) in this.genres" :key="index" class=" bg-blue px-2 py-1 rounded-md">{{genre}}</p>
+            </div>
+            <h2 class="text-[#fff] text-2xl font-bold pl-2 mt-2" v-if="movieInfo.title">{{movieInfo.title}}</h2>
+            <h2 class="text-[#fff] text-2xl font-bold pl-2 mt-2" v-else>{{movieInfo.name}}</h2>
+        </div>
 
     </div>
   </div>
@@ -19,8 +23,15 @@ export default {
     },
     data(){
         return{
-            store
+            store,
+            genres : []
         }
+    },
+    created(){
+        for(let id in this.movieInfo.genre_ids){
+            this.genres.push(store.genres[id].name)
+        }
+        
     }
 }
 </script>

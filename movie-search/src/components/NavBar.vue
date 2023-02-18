@@ -1,5 +1,5 @@
 <template>
-  <div class="h-24 flex flex-col justify-center bg-blue text-light">
+  <div class="h-24 flex flex-col justify-center bg-blue text-light sticky top-0 z-50 ">
     
       <nav class="flex flex-row justify-between mx-12 ">
         <div>
@@ -7,7 +7,8 @@
         </div>
 
         <div class="bg-blue flex flex-col justify-center">
-          <select name="Genres" id="" class="bg-blue">
+          <select name="Genres" id="" class="bg-blue outline-none">
+            <option value="" selected disabled>Genre</option>
             <option  v-for="genre in this.store.genres" :key="genre.id" :value="genre.name">{{genre.name}}</option>
           </select>
         </div>  

@@ -5,14 +5,14 @@ module.exports = {
     extend: {},
     colors: {
      
-      'blue': '#212121',
+      'blue': '#020d18',
       'deep-blue':'#100E1D',
       'light':'#abb7c4',
       'gray':'#6E707A;',
-      'dark': '#A09FB1',
-      'lightgray':'#88869D',
+      'dark': '#233a50',
+      'input-text':'#abb7c4',
       'button-blue':'#3C47E9',
-      'yellow':'#FFEC65'
+      'input-border':'#020d18'
     },
   },
   plugins: [],
