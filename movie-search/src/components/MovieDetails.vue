@@ -1,13 +1,13 @@
 <template>
-  <div class="px-20 text-light">
+  <div class="md:px-20 px-5 text-light">
     <SearchBar />
 
    
     <h1 class="text-2xl mb-4 font-bold text-light">You searched: {{store.name}}</h1>
-    <div class="grid grid-cols-3">
+    <div class="sm:grid sm:grid-cols-3 gap-4 flex flex-col">
     <img :src="this.store.movieDetails.Poster" alt="">
 
-        <div class="grid-span-2">
+        <div class="col-span-2">
             <h1 class="text-2xl font-bold pb-4">{{this.store.movieDetails.Title}}</h1>
             <p class="text-lg mb-4">Plot:  {{this.store.movieDetails.Plot}}</p>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="text-light" @click="store.searchMovie(this.title); route()">
 
-    <div v-bind:style="{ backgroundImage: 'url(' + 'https://image.tmdb.org/t/p/w500/'+ movieInfo.poster_path + ')' }" class="p-4 h-[45rem]  relative rounded-md ">
+    <div v-bind:style="{ backgroundImage: 'url(' + 'https://image.tmdb.org/t/p/w500/'+ movieInfo.poster_path + ')', backgroundPosition:'center' }" class="p-4 h-[45rem]  relative rounded-md ">
         <div class="ml-4 absolute inset-x-0 bottom-8 mb-4">
             <div class="flex flex-row gap-2 flex-wrap">
                 <p v-for="(genre,index) in this.genres" :key="index" class=" bg-blue px-2 py-1 rounded-md">{{genre}}</p>

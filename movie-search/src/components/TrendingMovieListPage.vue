@@ -1,8 +1,8 @@
 <template>
-  <div class="landing-cont  px-20">
+  <div class="landing-cont  md:px-20 px-5">
     <SearchBar />
     <h1 class="text-2xl mb-4 font-bold text-light">Trending Movies:</h1>
-    <div class="grid grid-cols-3 grid-rows-4 gap-2">
+    <div class="sm:grid lg:grid-cols-3 lg:grid-rows-4 gap-2 flex flex-col sm:grid-cols-2">
         <MovieListCard v-for="movie in this.store.trendingMovies.slice(0,12)" :key="movie.id" :movie-info="movie" />
     </div>
   </div>

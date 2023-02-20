@@ -1,11 +1,11 @@
 <template>
   <div class="h-24 flex flex-col justify-center bg-blue text-light sticky top-0 z-50 ">
     
-      <nav class="flex flex-row justify-between mx-12 ">
+      <nav class="flex flex-row justify-between md:px-12  px-5">
         
         <div>
           <router-link to="/">
-          <h1 class="text-4xl">Movie Finder</h1>
+          <h1 class="md:text-4xl text2xl">Movie Finder</h1>
          </router-link>
         </div>
 
