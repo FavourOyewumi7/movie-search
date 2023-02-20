@@ -1,5 +1,6 @@
 <template>
   <div id="app " class=" text-light">
+    <page-loader class="" v-if="store.showLoader"></page-loader>
     <NavBar />
     <router-view />
     <FooterBar />
@@ -8,15 +9,25 @@
 
 <script>
 import NavBar from './components/NavBar.vue';
-
+import PageLoader from './components/PageLoader.vue';
 import FooterBar from './components/FooterBar.vue';
+import { store } from './store';
 export default {
   name: 'App',
   components: {
     NavBar,
+    PageLoader,
     FooterBar
+  },
+  data(){
+    return{
+      store
+    }
+  },
+  
+
   }
-}
+
 </script>
 
 <style>
