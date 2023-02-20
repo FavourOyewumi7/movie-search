@@ -44,7 +44,7 @@ export default {
     },
     methods:{
         route(){
-            this.$router.push({path:'/movie'})
+            this.$router.push({path:`/movie/${this.title}`})
         }
     }
 }

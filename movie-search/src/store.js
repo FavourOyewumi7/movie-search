@@ -44,7 +44,7 @@ export const store = reactive({
     },
 
     searchMovie(movie){
-        fetch(`http://www.omdbapi.com/?apikey=afa110c8&t=${movie}&plot=full`)
+        fetch(`https://www.omdbapi.com/?apikey=afa110c8&t=${movie}&plot=full`)
         .then((Response)=>Response.json())
         .then((data)=>
         //console.log(data),

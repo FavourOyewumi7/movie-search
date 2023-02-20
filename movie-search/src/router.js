@@ -19,7 +19,7 @@ const routes = [
             },
             {
                 name:'movie',
-                path:'/movie',
+                path:'/movie/:value',
                 component:()=>import('./components/MovieDetails.vue')
             }
 
