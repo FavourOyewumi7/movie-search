@@ -3,7 +3,7 @@
 
 search for any movie
 
-demo: movie-search-woad.vercel.app
+demo: https://movie-search-woad.vercel.app
 worked with both
 tmdb api https://developers.themoviedb.org/
 and 
