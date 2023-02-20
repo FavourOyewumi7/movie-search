@@ -1,8 +1,8 @@
 <template>
-    <div class="px-20">
+    <div class="md:px-20 px-5">
         <SearchBar />
         
-        <div class="grid grid-cols-3 grid-rows-4 gap-2">
+        <div class="sm:grid lg:grid-cols-3 lg:grid-rows-4 gap-2 flex flex-col sm:grid-cols-2">
             <MovieListCard v-for="movie in this.store.genreMovies" :key="movie.id" :movie-info="movie" />
         </div>
     </div>
