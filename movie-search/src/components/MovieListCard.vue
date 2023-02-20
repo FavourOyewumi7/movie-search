@@ -8,6 +8,8 @@
             </div>
             <h2 class="text-[#fff] text-2xl font-bold pl-2 mt-2" v-if="movieInfo.title">{{movieInfo.title}}</h2>
             <h2 class="text-[#fff] text-2xl font-bold pl-2 mt-2" v-else-if="movieInfo.name">{{movieInfo.name}}</h2>
+            <h2 class="text-[#fff] text-2xl font-bold pl-2 mt-2" v-else-if="movieInfo == '' ">There's no movie name</h2>
+
             
             
         </div>

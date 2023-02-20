@@ -4,7 +4,8 @@
         <SearchBar />
         <h1 class="text-2xl mb-4 font-bold text-light">You searched: {{store.movieName}}</h1>
         <div class="sm:grid lg:grid-cols-3 lg:grid-rows-4 gap-2 flex flex-col sm:grid-cols-2">
-            <MovieListCard v-for="movie in this.store.movieCollections" :key="movie.id" :movie-info="movie" />
+            <h1 v-if="this.store.movieCollections.length == 0">There's no movie with this name</h1>
+            <MovieListCard v-for="movie in this.store.movieCollections" :key="movie.id" :movie-info="movie" v-else />
         </div>
     </div>
 </template>
