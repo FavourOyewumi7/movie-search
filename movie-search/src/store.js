@@ -2,8 +2,8 @@ import { reactive } from "vue";
 
 
 export const store = reactive({
-
-    
+    year:'',
+    yearList:'',
     genres:'',
     genreMovies: '',
     genreSelected:'',
@@ -38,6 +38,20 @@ export const store = reactive({
             alert(err)
         }
     },
+    fetchYear(year){
+        try{
+        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=6ad9a9058889fb72a10160a86ef5a7a6&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=${year}&with_watch_monetization_types=flatrate`)
+            .then((Response)=>Response.json())
+            .then((data)=>
+        //console.log(data.results)
+        this.yearList = data.results,
+        this.year = year
+        )}
+        catch(err){
+            alert(err)
+        }
+    },
+
 
     searchMovies(value){
         let word = value.toLowerCase()

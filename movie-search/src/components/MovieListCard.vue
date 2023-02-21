@@ -1,9 +1,9 @@
 <template>
-  <div class="text-light" @click="store.searchMovie(this.title); route()">
+  <div class="text-light " @click="store.searchMovie(this.title); route()">
 
     <div v-bind:style="{ backgroundImage: 'url(' + 'https://image.tmdb.org/t/p/w500/'+ movieInfo.poster_path + ')', backgroundPosition:'center' }" class="p-4 h-[45rem]  relative rounded-md ">
-        <div class="ml-4 absolute inset-x-0 bottom-8 mb-4">
-            <div class="flex flex-row gap-2 flex-wrap">
+        <div class="pl-4 absolute inset-x-0 bottom-8 py-4 card-text">
+            <div class="flex flex-row gap-2 flex-wrap ">
                 <p v-for="(genre,index) in this.genres" :key="index" class=" bg-blue px-2 py-1 rounded-md">{{genre}}</p>
             </div>
             <h2 class="text-[#fff] text-2xl font-bold pl-2 mt-2" v-if="movieInfo.title">{{movieInfo.title}}</h2>
@@ -53,5 +53,8 @@ export default {
 </script>
 
 <style>
+.card-text{
+    background: rgba(2, 13, 24, 0.6);
+}
 
 </style>
