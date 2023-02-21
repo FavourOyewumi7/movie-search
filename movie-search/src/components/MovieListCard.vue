@@ -1,5 +1,5 @@
 <template>
-  <div class="text-light " @click="store.searchMovie(this.title); route()">
+  <div class="text-light cursor-pointer " @click="store.searchMovie(this.title); route()">
 
     <div v-bind:style="{ backgroundImage: 'url(' + 'https://image.tmdb.org/t/p/w500/'+ movieInfo.poster_path + ')', backgroundPosition:'center' }" class="p-4 h-[45rem]  relative rounded-md ">
         <div class="pl-4 absolute inset-x-0 bottom-8 py-4 card-text">
